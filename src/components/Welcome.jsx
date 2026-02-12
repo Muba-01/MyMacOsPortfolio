@@ -48,7 +48,7 @@ const setupTextHover = (container, type) => {
   };
 
   const handleMouseLeave = () => 
-    letters.forEach((letter) => animateLetter(letter, base, 0.3));
+    letters.forEach((letter) => animateLetter(letter, defaultWeight, 0.3));
            
   container.addEventListener("mousemove", handleMouseMove);
   container.addEventListener("mouseleave", handleMouseLeave);
@@ -84,7 +84,7 @@ const Welcome = () => {
         )}
       </p>
       <h1 ref={titleRef}>
-        {renderText("Portfolio", "text-9xl italic font-georama")}
+        {renderText("portfolio", "text-9xl italic font-georama")}
       </h1>
 
       <div className="small-screen">
