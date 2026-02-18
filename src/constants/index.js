@@ -77,25 +77,24 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+    date: "July 27, 2025",
+    title: "Interactive Design | Final Project",
     image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    link: "https://muhammadmubashirsblog.blogspot.com/2025/07/blog-post.html",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
+    date: "July 20, 2025",
+    title: "Typography - Final Compilation & Reflection",
     image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    link: "https://muhammadmubashirsblog.blogspot.com/2025/07/typography-final-compilation-reflection.html",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
+    date: "February 08, 2025",
+    title: "Design Principles: Final Compilation & Reflection",
     image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    link: "https://muhammadmubashirsblog.blogspot.com/2025/02/task-4-final-compilation.html",
   },
 ];
 
