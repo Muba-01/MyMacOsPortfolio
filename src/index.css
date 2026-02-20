@@ -237,7 +237,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -269,27 +269,13 @@ body {
       @apply p-5;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+        @apply grid grid-cols-3 grid-rows-2 gap-3;
 
         li {
+          @apply overflow-hidden rounded-lg h-56;
+
           img {
-            @apply size-full object-cover rounded-lg;
-          }
-
-          &:first-child {
-            @apply row-start-1 row-span-3 col-start-1 col-span-3;
-          }
-
-          &:nth-child(2) {
-            @apply row-start-1 row-span-3 col-start-4 col-span-2;
-          }
-
-          &:nth-child(3) {
-            @apply row-start-4 row-span-2 col-start-3 col-span-3;
-          }
-
-          &:last-child {
-            @apply row-start-4 row-span-2 col-start-1 col-span-2;
+            @apply w-full h-full object-cover;
           }
         }
       }
@@ -356,6 +342,21 @@ body {
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
+    .text-file {
+      @apply p-6 max-w-2xl mx-auto text-sm leading-relaxed;
+
+      img {
+        @apply w-full max-h-64 object-contain rounded-md mb-4;
+      }
+
+      .subtitle {
+        @apply text-gray-600 mb-3 font-medium;
+      }
+
+      p {
+        @apply mb-4 text-gray-700;
+      }
+    }
   }
 
   #imgfile {
@@ -368,10 +369,10 @@ body {
     }
 
     .preview {
-      @apply p-2 bg-gray-200 max-h-[70vh];
+      @apply p-4 bg-gray-200 max-h-[80vh] overflow-auto flex items-center justify-center;
 
       img {
-        @apply w-full h-fit object-contain object-center;
+        @apply max-w-full max-h-[75vh] object-contain rounded-md;
       }
     }
   }
@@ -392,5 +393,10 @@ body {
         }
       }
     }
+  }
+
+  /* support maximized state only (no CSS resize) */
+  .maximized {
+    border-radius: 0 !important;
   }
 }

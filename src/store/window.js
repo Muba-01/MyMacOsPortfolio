@@ -27,6 +27,27 @@ const useWindowStore = create(immer((set) => ({ // Changed to return an object d
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex++;
     }), 
+    toggleMaximize: (windowKey) => set((state) => {
+        const win = state.windows[windowKey];
+        if (!win) return;
+        if (!win.isMaximized) {
+            // save current bounds so we can restore later
+            win.prevBounds = win.bounds ?? null;
+            win.isMaximized = true;
+        } else {
+            win.isMaximized = false;
+            if (win.prevBounds) {
+                win.bounds = win.prevBounds;
+                win.prevBounds = null;
+            }
+        }
+    }),
+
+    setWindowBounds: (windowKey, bounds) => set((state) => {
+        const win = state.windows[windowKey];
+        if (!win) return;
+        win.bounds = bounds;
+    }),
 }))); 
 
 export default useWindowStore;
